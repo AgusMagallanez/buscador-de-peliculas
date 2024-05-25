@@ -1,0 +1,121 @@
+.header__container {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #000000;
+  position: sticky;
+  top: 0;
+}
+
+.header__logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo-container > img {
+  width: 95px;
+  height: 95px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 38px;
+  text-shadow: 1px 1px #fff4f46e;
+}
+
+.header__form {
+  margin-bottom: 20px;
+}
+
+.header__form > input {
+  border: solid 1px #fff4f4aa;
+  margin: 5px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 95%;
+  background-color: #ffffff17;
+  color: #fff;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+.header__form > input[type="submit"]:hover {
+  background-color: #bd4d4d;
+}
+@media (min-width: 700px) {
+  .header__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 48px;
+    margin: 0;
+  }
+  .header__form {
+    display: flex;
+    margin: 0 5px;
+  }
+  .header__form > input {
+    margin: 0 10px;
+  }
+  .header__form > input[type="text"] {
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #fff4f46e;
+  }
+}
+@media (min-width: 1250px) {
+  .header__form > input[type="submit"] {
+    padding: 10px;
+    font-size: 22px;
+  }
+}
+.movie-list {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+@media (min-width: 600px) {
+  .movie-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 860px) {
+  .movie-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1250px) {
+  .movie-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.movie-list__card {
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  background-color: #151515;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.383);
+}
+.movie-list__card > img {
+  max-width: 70%;
+  max-height: fit-content;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.movie-list__card > h2,
+h3,
+p {
+  margin: 10px;
+  max-height: 200px;
+  overflow: auto;
+}
